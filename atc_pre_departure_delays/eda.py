@@ -55,3 +55,41 @@ print()
 
 print('Unikaty w kolumnach:')
 print(df.nunique())
+print()
+
+print('Wyświetl pierwszą kolumnę:')
+print(df['YEAR'])
+print()
+
+print('Wyświetl drugą kolumnę:')
+print(df['MONTH_NUM'])
+print()
+
+print('Pokaż unikaty pierwszej kolumny - lata:')
+print(df['YEAR'].unique())
+print()
+
+print('Pokaż unikaty drugiej kolumny - miesiące:')
+print(df['MONTH_NUM'].unique())
+print()
+
+print('Pokaż wartości unikatów i ilość ich wystąpień w kolumnie MONTH_NUM:')
+print(df['MONTH_NUM'].value_counts())
+print()
+
+print('Czy są duplikaty dla kolumny STATE_NAME?')
+print(df['STATE_NAME'].duplicated())
+print()
+
+
+# df['age'].unique() -> pokaż duplikaty wybranej kolumny
+# df['age'].value_counts() -> pokaż wartości unikatów i ilość ich wystąpień
+# df["height [m]"] = df["height [cm]"] / 100 -> nowa kolumna z kalkulacji innej
+# df["bmi category"] = df["bmi"].apply(bmi_category) -> nowa kolumna z wynikiem działania funkcji
+# df.drop(columns="height [m]", inplace=True) -> usunięcie kolumny
+# df = df.drop('Klasyfikacja', axis=1) -> trwałe usunięcie kolumny
+# df["age"] += 1 -> nadpisanie wartości w kolumnie
+# df = df.rename(columns={"name" : "Imię"}) -> zmiana nazwy kolumny
+# df.columns = ['Imię', 'Wiek', 'Waga', 'Wzrost', 'Kraj', 'BMI', 'Klasyfikacja'] -> zmiana nazw kolumn w kolejności występowania
+# df.sort_values(by="Wzrost") -> sortowanie po kolumnie - rosnąco
+# df.sort_values(by="Wzrost", ascending=False) -> sortowanie po kolumnie - malejąco
